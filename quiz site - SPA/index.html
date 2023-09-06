@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizios</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/favicon.ico">
+
+</head>
+
+<body>
+
+    <main class="main">
+        <header class="header">
+
+            <a href="#" onclick="showHome()" class="logo">Quizios</a>
+
+            <nav class="navbar">
+                <a href="#" onclick="showHome()" class="homePage">Home</a>
+                <a href="#about" onclick="showAbout()" class="aboutPage">About</a>
+                <a href="#contact" onclick="showContact()" class="contactPage">Contact</a>
+            </nav>
+            <!-- route() -->
+
+        </header>
+        <div class="container active">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Coding Quiz</h1>
+                    <div class="quiz-header">
+                        <span>Quizios For You</span>
+                        <span class="header-score"></span>
+                    </div>
+
+                    <h2 class="question-text"></h2>
+
+                    <div class="option-list">
+                        <div class="option">
+                            <span class="option-one"></span>
+                        </div>
+                        <div class="option">
+                            <span class="option-two"></span>
+                        </div>
+                        <div class="option">
+                            <span class="option-three"></span>
+                        </div>
+                        <div class="option">
+                            <span class="option-four"></span>
+                        </div>
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total"></span>
+                        <button class="cancel-btn"></button>
+                        <button class="next-btn"></button>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="home">
+                <div class="home-content">
+                    <h1>Try Your Knowledge</h1>
+                    <p>Pick from a category you are familiar with and lets see how well you do!
+                    </p>
+                    <button class="start-btn">Start Quiz</button>
+                </div>
+            </section>
+
+
+            <section class="about">
+                    <div class="about-content">
+                        <h1>Made by Sidad Alali</h1>
+                        <p>This quiz site was made using JavaScript, HTML and CSS.
+                            I'ts a quiz site for trying your knowledge on different topics!
+                            a Personal project by me using some inspiration for the design from YouTube.
+                        </p>
+                    </div>
+            </section>
+
+            <section class="contact">
+                <div class="contact-content">
+                    <h1>Reach out to me!</h1>
+                    <p>Feel free to contact me on my email: <a href=mailto:“sidadbusiness@gmail.com” class="email">sidadbusiness@gmail.com</a>
+                    </p>
+                    <p>Or contact me on my linkedIn: <a href="https://www.linkedin.com/in/sidad-alali-124a34249/" class="linkedin">https://www.linkedin.com/in/sidad-alali-124a34249/</a>
+                    </p>
+                </div>
+        </section>
+
+        </div>
+
+
+
+
+
+    </main>
+    <div class="popup-info">
+        <h2>Are You Ready?</h2>
+        <span class="info">1. Once you pick your answer you can't change it</span>
+        <span class="info">2. After you select your answer press NEXT</span>
+        <span class="info">3. You can see how well you did from your score</span>
+        <span class="info">4. Good luck!</span>
+
+
+        <div class="btn-group">
+            <a href="#coding-quiz" class="info-btn coding-btn">Coding</a>
+            <a href="#science-quiz" class="info-btn science-btn">Science</a>
+            <a href="#animals-quiz" class="info-btn animals-btn">Animals</a>
+            <a href="#maths-quiz" class="info-btn maths-btn">Maths</a>
+            <!-- onclick="route()"  -->
+
+            <button class="info-btn exit-btn">Exit Quiz</button>
+
+
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+    <script src="/questions.js"></script>
+    <script src="/routing.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1315 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(17, 2, 85);
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+
+.logo {
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    filter: drop-shadow(0 0 3px aqua);
+}
+
+
+
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    margin-left: 30px;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: aqua;
+
+}
+
+
+
+.main {
+    max-height: 100vh;
+    background: url('/background.jpg'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .5s ease;
+    pointer-events: auto;
+
+}
+
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
+
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 200%;
+
+}
+
+
+
+.home {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+
+
+}
+
+.about {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.7);
+    transition: .3s ease-in-out;
+    opacity: 0;
+
+}
+
+.contact {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.7);
+    transition: .3s ease-in-out;
+    opacity: 0;
+
+}
+
+.home-content {
+    position: absolute;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.home.hidden {
+    transform: scale(.7);
+    opacity: 0;
+    position: absolute;
+    display: inline;
+}
+
+.about.hidden {
+    position: absolute;
+}
+
+.about.show {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.contact.hidden {
+    position: absolute;
+}
+
+.contact.show {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.home-content h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    /* filter: drop-shadow(0 0 3px aqua); */
+    text-shadow: 0 10px 10px black;
+}
+
+.home-content p {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 0 10px 5px black;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+.start-btn {
+    color: white;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid white;
+    background-color: rgb(3, 163, 163);
+    border-radius: 5px;
+    box-shadow: 0 0 10px aqua;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.start-btn:hover {
+    padding-left: 60px;
+    padding-right: 60px;
+    background: transparent;
+
+}
+
+.popup-info {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(.8);
+    width: 700px;
+    background: rgb(3, 163, 163);
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.popup-info h2 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 0 2px aqua);
+}
+
+.popup-info .info {
+    display: flex;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    margin: 4px 0;
+
+}
+
+.popup-info .btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    margin-top: 15px;
+}
+
+.popup-info .btn-group .info-btn {
+    color: white;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid white;
+    text-decoration: none;
+    /* background-color: rgb(1, 139, 139); */
+    border-radius: 5px;
+    box-shadow: 0 0 10px aqua;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: .3s;
+
+}
+
+.popup-info .btn-group .coding-btn {
+    background-color: rgb(0, 83, 83);
+
+}
+
+.popup-info .btn-group .science-btn {
+    background-color: rgb(0, 83, 83);
+
+}
+
+.popup-info .btn-group .animals-btn {
+    background-color: rgb(0, 83, 83);
+
+}
+
+.popup-info .btn-group .maths-btn {
+    background-color: rgb(0, 83, 83);
+
+}
+
+
+.popup-info .btn-group .exit-btn {
+    background-color: rgb(3, 163, 163);
+
+}
+
+
+.popup-info .btn-group .coding-btn:hover {
+    background-color: rgb(3, 163, 163);
+}
+
+.popup-info .btn-group .science-btn:hover {
+    background-color: rgb(3, 163, 163);
+}
+
+.popup-info .btn-group .animals-btn:hover {
+    background-color: rgb(3, 163, 163);
+}
+
+.popup-info .btn-group .maths-btn:hover {
+    background-color: rgb(3, 163, 163);
+}
+
+
+
+.popup-info .btn-group .exit-btn:hover {
+    background-color: rgb(1, 105, 105);
+}
+
+.popup-info.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 50%) scale(1);
+}
+
+
+.quiz-section {
+    position: relative;
+    left: -50%;
+    color: white;
+    width: 100%;
+    background: url(box-back.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+
+.quiz-section.active {
+    left: 0;
+}
+
+.quiz-section .quiz-box {
+    position: relative;
+    width: 500px;
+    border: 2px solid white;
+    background: rgba(0, 91, 165, 0.932);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    pointer-events: none;
+    transform: scale(.9);
+    opacity: 0;
+}
+
+
+.quiz-section .quiz-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+
+.quiz-box h1 {
+    font-size: 40px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, rgb(3, 163, 163), transparent);
+    border-radius: 8px;
+}
+
+.quiz-box .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid white;
+}
+
+.quiz-box .header-score {
+    background: rgb(3, 163, 163);
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+.quiz-box .question-text {
+    padding-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.option-list .option {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 17px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.option-list .option:hover {
+    background: rgb(1, 95, 95);
+    border-color: rgb(4, 196, 196);
+}
+
+.option-list .option.correct {
+    border: 2px solid rgb(0, 150, 0);
+    color: rgb(79, 248, 79);
+    background: rgba(0, 0, 0, 0.253);
+}
+
+.option-list .option.incorrect {
+    border: 2px solid rgb(163, 0, 0);
+    color: rgb(252, 68, 68);
+    background: rgba(0, 0, 0, 0.253);
+}
+
+.option-list .option.disabled {
+    pointer-events: none;
+}
+
+.quiz-box .quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 2px solid white;
+}
+
+.quiz-footer .question-total {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.quiz-footer .next-btn {
+    color: rgb(145, 145, 145);
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid rgb(170, 170, 170);
+    background: rgb(1, 83, 83);
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    pointer-events: none;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.quiz-footer .next-btn.active {
+    background: rgb(3, 163, 163);
+    color: white;
+    border-color: white;
+    pointer-events: auto;
+}
+
+.quiz-footer .next-btn:hover {
+    box-shadow: 0 0 10px white;
+
+}
+
+.quiz-footer .cancel-btn {
+    color: white;
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid rgb(170, 170, 170);
+    background: rgb(3, 163, 163);
+    border-color: white;
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.quiz-footer .cancel-btn:hover {
+    box-shadow: 0 0 10px white;
+
+}
+
+.about-content {
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    background: rgba(20, 0, 197, 0.329);
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    border: 2px solid rgb(47, 140, 247);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.about-content h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    filter: drop-shadow(0 0 3px aqua);
+    text-shadow: 0 10px 10px black;
+}
+
+.about-content p {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 0 10px 5px black;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+.contact-content {
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    background: rgba(20, 0, 197, 0.329);
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    border: 2px solid rgb(47, 140, 247);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.contact-content h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    filter: drop-shadow(0 0 3px aqua);
+    text-shadow: 0 10px 10px black;
+}
+
+.contact-content p {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 0 10px 5px black;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+.contact-content .email {
+    color: white;
+    letter-spacing: 1px;
+    transition: .3s;
+
+}
+
+.contact-content .email:hover {
+    color: rgb(0, 204, 255);
+
+
+}
+
+.contact-content .linkedin {
+    color: white;
+    letter-spacing: 1px;
+    transition: .3s;
+
+
+}
+
+.contact-content .linkedin:hover {
+    color: rgb(0, 204, 255);
+
+
+}
+
+
+@media (max-width: 700px) {
+    .header {
+        position: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        margin: 0 15px 0 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .home {
+        width: 0%;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .home-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .about {
+        width: 0%;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .about-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .contact {
+        width: 0%;
+    }
+
+    .contact-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .contact-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .start-btn {
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 200px;
+
+    }
+
+    .start-btn:hover {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 250px;
+        background: transparent;
+
+    }
+
+    /*  */
+    .popup-info {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(.8);
+        width: 400px;
+        background: rgb(3, 163, 163);
+        border-radius: 10px;
+        border: 2px solid white;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+
+    }
+
+    .popup-info h2 {
+        font-size: 30px;
+        letter-spacing: .1rem;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        filter: drop-shadow(0 0 2px aqua);
+    }
+
+    .popup-info .info {
+        display: inline-block;
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        margin: 4px 0;
+
+    }
+
+    .popup-info .btn-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid white;
+        margin-top: 10px;
+
+    }
+
+    .popup-info .btn-group .info-btn {
+        color: white;
+        padding: 10px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border: 2px solid white;
+        /* background-color: rgb(1, 139, 139); */
+        border-radius: 5px;
+        box-shadow: 0 0 10px aqua;
+        font-size: 9px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: .3s;
+
+    }
+
+    /*  */
+
+    .quiz-section {
+        position: relative;
+        left: -100%;
+        width: 200%;
+    }
+
+    .quiz-section.active {
+        left: 0;
+    }
+
+    .quiz-section .quiz-box {
+        width: 410px;
+        padding: 10px 20px;
+    }
+
+    .quiz-box h1 {
+        font-size: 25px;
+    }
+
+    .quiz-box .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 2px solid white;
+    }
+
+    .quiz-box .header-score {
+        background: rgb(3, 163, 163);
+        border: 1px solid white;
+        padding: 7px;
+        border-radius: 6px;
+    }
+
+    .quiz-box .question-text {
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .option-list .option {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 200;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+    .header {
+        position: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        margin: 0 15px 0 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .home {
+        width: 0%;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .home-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .about {
+        width: 0%;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 0;
+
+
+    }
+
+    .about-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .about-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .contact {
+        width: 0%;
+    }
+
+    .contact-content {
+        width: 100%;
+        padding: 0;
+
+
+    }
+
+    .contact-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .contact-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .start-btn {
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 200px;
+
+    }
+
+    .start-btn:hover {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 250px;
+        background: transparent;
+
+    }
+
+    /*  */
+    .popup-info {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(.8);
+        width: 400px;
+        background: rgb(3, 163, 163);
+        border-radius: 10px;
+        border: 2px solid white;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+
+    }
+
+    .popup-info h2 {
+        font-size: 30px;
+        letter-spacing: .1rem;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        filter: drop-shadow(0 0 2px aqua);
+    }
+
+    .popup-info .info {
+        display: inline-block;
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        margin: 4px 0;
+
+    }
+
+    .popup-info .btn-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid white;
+        margin-top: 10px;
+
+    }
+
+    .popup-info .btn-group .info-btn {
+        color: white;
+        padding: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border: 2px solid white;
+        /* background-color: rgb(1, 139, 139); */
+        border-radius: 5px;
+        box-shadow: 0 0 10px aqua;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: .3s;
+
+    }
+
+    /*  */
+
+    .quiz-section {
+        position: relative;
+        left: -100%;
+        width: 200%;
+    }
+
+    .quiz-section.active {
+        left: 0;
+    }
+
+    .quiz-section .quiz-box {
+        width: 410px;
+        padding: 10px 20px;
+    }
+
+    .quiz-box h1 {
+        font-size: 25px;
+    }
+
+    .quiz-box .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 2px solid white;
+    }
+
+    .quiz-box .header-score {
+        background: rgb(3, 163, 163);
+        border: 1px solid white;
+        padding: 7px;
+        border-radius: 6px;
+    }
+
+    .quiz-box .question-text {
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .option-list .option {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 200;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .header {
+        position: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        margin: 0 15px 0 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .home {
+        width: 0%;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .home-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .about {
+        width: 0%;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 0;
+        border: none;
+
+
+    }
+
+    .about-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .about-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .contact {
+        width: 0%;
+    }
+
+    .contact-content {
+        width: 100%;
+        padding: 0;
+        border: none;
+
+
+    }
+
+    .contact-content h1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: .1rem;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .contact-content p {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        width: 400px;
+        letter-spacing: .15rem;
+
+    }
+
+    .start-btn {
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 200px;
+
+    }
+
+    .start-btn:hover {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 250px;
+        background: transparent;
+
+    }
+
+    /*  */
+    .popup-info {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(.8);
+        width: 400px;
+        background: rgb(3, 163, 163);
+        border-radius: 10px;
+        border: 2px solid white;
+        padding: 10px 25px;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+
+    }
+
+    .popup-info h2 {
+        font-size: 30px;
+        letter-spacing: .1rem;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        filter: drop-shadow(0 0 2px aqua);
+    }
+
+    .popup-info .info {
+        display: inline-block;
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        margin: 4px 0;
+
+    }
+
+    .popup-info .btn-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid white;
+        margin-top: 10px;
+
+    }
+
+    .popup-info .btn-group .info-btn {
+        color: white;
+        padding: 10px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border: 2px solid white;
+        /* background-color: rgb(1, 139, 139); */
+        border-radius: 5px;
+        box-shadow: 0 0 10px aqua;
+        font-size: 11px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: .3s;
+
+    }
+
+    /*  */
+
+    .quiz-section {
+        position: relative;
+        left: -100%;
+        width: 200%;
+    }
+
+    .quiz-section.active {
+        left: 0;
+    }
+
+    .quiz-section .quiz-box {
+        width: 410px;
+        padding: 10px 20px;
+    }
+
+    .quiz-box h1 {
+        font-size: 25px;
+    }
+
+    .quiz-box .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 2px solid white;
+    }
+
+    .quiz-box .header-score {
+        background: rgb(3, 163, 163);
+        border: 1px solid white;
+        padding: 7px;
+        border-radius: 6px;
+    }
+
+    .quiz-box .question-text {
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .option-list .option {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 200;
+    }
+
+}
